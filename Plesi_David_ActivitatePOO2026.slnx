@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Plesi_David_ActivitatePOO2026/Plesi_David_ActivitatePOO2026.vcxproj" />
+</Solution>
