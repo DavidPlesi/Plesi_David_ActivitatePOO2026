@@ -21,7 +21,7 @@
     <ClCompile Include="Sem2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\pb1\pb1\pb1.cpp">
+    <ClCompile Include="pb1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
