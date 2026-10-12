@@ -27,7 +27,7 @@
     <ClCompile Include="..\..\..\pb2\pb2\pb2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\pb12.10.26\pb12.10.26\pb12.10.26.cpp">
+    <ClCompile Include="pb_lucrata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
