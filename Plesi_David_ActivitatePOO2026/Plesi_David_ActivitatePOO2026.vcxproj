@@ -139,6 +139,8 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\pb12.10.26\pb12.10.26\pb12.10.26.cpp" />
+    <ClCompile Include="..\..\..\pb2\pb2\pb2.cpp" />
     <ClCompile Include="pb1.cpp" />
     <ClCompile Include="Sem2.cpp" />
     <ClCompile Include="Seminarul1.cpp" />
