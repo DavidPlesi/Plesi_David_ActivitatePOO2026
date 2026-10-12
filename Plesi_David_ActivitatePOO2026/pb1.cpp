@@ -32,8 +32,8 @@ void afisareNote(float* v, int n) {//deoarece mai sus am spus ca subp va returna
 int main()
 {
 	int n = 0;
-	float* note = citireNote(n);
-	afisareNote(note, n);
-	delete[] note;
-	return 0;
+	float* note = citireNote(n);//citireNote returneaza o adresa , adica un * de tip float , asa ca in main tre sa fie la fel
+	afisareNote(note, n);//de ce punem si n in (note,n) , deoarece note ii da doar adresa de start si nu ii zice dimensiunea sirului;n ii spune sa parcurga forul de n ori
+	delete[] note;//de ce eliberam note cand am alocat mem pt v in citire?deoarece in main nu stie cine este v , el e o variabila locala de acolo , si in schimb
+	return 0;//cand am dat return v; in citire adresa aceea s a dus in main si a fost salvata in note => note = citireNote(n); si atunci eliberam in main pe note care e de fapt v din citire
 }
