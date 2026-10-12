@@ -11,8 +11,8 @@ citește notele de la tastatură și returnează pointerul către zona de memori
 using namespace std;
 
 
-float* citireNote(int& n)
-{
+float* citireNote(int& n)//pointerul la float , indica ca subprogramul va returna o adresa , si nu o valoare
+{//astfel , va returna adresa primului element din vector care ne va permite sa citim tot vectorul
 
 	cout << "Nr de note: ";
 	cin >> n;
