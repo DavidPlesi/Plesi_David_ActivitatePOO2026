@@ -21,9 +21,9 @@ float* citireNote(int& n)//pointerul la float , indica ca subprogramul va return
 		cout << "Nota " << i + 1 << ": ";
 		cin >> v[i];
 	}
-	return v;
-}
-void afisareNote(float* v, int n) {
+	return v;//cand returnam v , v deja reprezinta adresa catre primul el din vect , deci nu mai am nevoie de *
+}//daca as fi pus *v , el ar fi incercat sa reurneze valoarea stocata la adresa primului el si ar da eroare de compilare
+void afisareNote(float* v, int n) {//deoarece mai sus am spus ca subp va returna o adresa nu o valoare
 
 	for (int i = 0;i < n;i++) {
 		cout << v[i] << " ";
