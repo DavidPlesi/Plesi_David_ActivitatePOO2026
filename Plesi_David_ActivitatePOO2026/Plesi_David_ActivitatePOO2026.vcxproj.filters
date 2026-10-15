@@ -30,7 +30,7 @@
     <ClCompile Include="pb_lucrata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Sem3\Sem3.cpp">
+    <ClCompile Include="Sem3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
