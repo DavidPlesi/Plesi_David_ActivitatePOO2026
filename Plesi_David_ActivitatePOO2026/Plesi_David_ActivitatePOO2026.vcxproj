@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\pb2\pb2\pb2.cpp" />
+    <ClCompile Include="..\..\..\Sem3\Sem3.cpp" />
     <ClCompile Include="pb1.cpp" />
     <ClCompile Include="pb_lucrata.cpp" />
     <ClCompile Include="Sem2.cpp" />
