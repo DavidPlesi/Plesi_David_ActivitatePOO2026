@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pb_acasa.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Sem4\Sem4.cpp">
+    <ClCompile Include="pbA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

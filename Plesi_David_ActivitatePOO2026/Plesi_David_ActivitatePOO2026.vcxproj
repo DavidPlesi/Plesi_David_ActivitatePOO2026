@@ -139,8 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pb_acasa.cpp" />
-    <ClCompile Include="Seminar4.cpp" />
+    <ClCompile Include="pbA.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
