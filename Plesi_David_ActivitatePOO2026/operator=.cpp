@@ -42,7 +42,7 @@ public:
 	Masina operator+(const Masina& m1) {//pun & la tipul obiectului m1 (la Masina) pentru a nu crea o copie noua a obiectului m1
 		Masina rezultat;
 		rezultat.caiPutere = this->caiPutere + m1.caiPutere;
-		rezultat.rulaj = this->rulaj + m1.rulaj;
+		rezultat.nrLocuri = this->nrLocuri + m1.nrLocuri;
 		return rezultat;
 	}
 	void afisare() {
