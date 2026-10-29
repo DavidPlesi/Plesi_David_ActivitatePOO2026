@@ -18,5 +18,8 @@
     <ClCompile Include="operator=.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sem5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
