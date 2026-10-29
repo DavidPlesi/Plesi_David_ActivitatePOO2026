@@ -58,10 +58,13 @@ public:
 		cout << "Cai Putere: " << caiPutere;
 	}
 	};
-int Masina::contor = 0;//alocam spatiu global pt variabila contor
-//:: op de rezolutie leaga variabila contor de clasa Masina
-Masina::~Masina() {//destructor
-	delete[]this->denumire;
+friend ostream& operator<<(ostream& os, Masina& m) {
+
+}
+	int Masina::contor = 0;//alocam spatiu global pt variabila contor
+	//:: op de rezolutie leaga variabila contor de clasa Masina
+	Masina::~Masina() {//destructor
+		delete[]this->denumire;
 }
 int main() {
 	Masina m;
