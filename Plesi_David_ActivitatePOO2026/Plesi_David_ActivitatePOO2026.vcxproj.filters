@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pb1.1.cpp">
+    <ClCompile Include="operator=.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
