@@ -4,7 +4,6 @@
 using namespace std;
 
 class Masina {
-public:
 	char* denumire;
 	float rulaj;
 	bool manuala;
@@ -13,7 +12,7 @@ public:
 	const int idMasina;//id ul e constant , pt ca nu vrem sa il modificam 
 	static int contor;//contorul este static , adica este acelasi de fiecare data cand e apelat constructorul Masina
 	
-
+public:
 	Masina(): idMasina(contor++){
 		this->denumire = new char[strlen("Fiat Punto") + 1];
 		strcpy(denumire, "Fiat Punto");
@@ -45,28 +44,51 @@ public:
 		rezultat.nrLocuri = this->nrLocuri + m1.nrLocuri;
 		return rezultat;
 	}
-	void afisare() {
-		cout << "Denumire: " << denumire << endl;
-		cout << "Rulaj: " << rulaj << endl;
-		cout << "Este manuala? ";
-		if (manuala == true)
-			cout << "Da";
-		else
-			cout << "Nu";
-		cout << endl;
-		cout << "Nr Locuri: " << nrLocuri << endl;
-		cout << "Cai Putere: " << caiPutere;
+	
+	int getCaiPutere()const{
+		return caiPutere;
 	}
+	int getNrLocuri() const{
+		return nrLocuri;
+	}
+	char* getDenumire() const{
+		return denumire;
+	}
+	float getRulaj() const{
+		return rulaj;
+	}
+	bool getManuala() const{
+		return manuala;
+	}
+	int getIdMasina() const{
+		return idMasina;
+	}
+	friend ostream& operator<<(ostream& os,const Masina& m);
 	};
-friend ostream& operator<<(ostream& os, Masina& m) {
-
+	ostream& operator<<(ostream& os,const Masina& m) {
+	os << "Denumire: " << m.getDenumire();
+	os << endl;
+	os << "Cai Putere: " << m.getCaiPutere();
+	os << endl;
+	os << "Id Masina: " << m.getIdMasina();
+	os << endl;
+	os << "Manuala: ";
+	if (m.getManuala())
+		os << "Da";
+	else
+		os << "Nu";
+	os << endl;
+	os << "Rulaj: " << m.getRulaj();
+	os << endl;
+	os << "Nr Locuri: " << m.getNrLocuri();
+	return os;
 }
-	int Masina::contor = 0;//alocam spatiu global pt variabila contor
+	int Masina::contor = 137;//alocam spatiu global pt variabila contor
 	//:: op de rezolutie leaga variabila contor de clasa Masina
 	Masina::~Masina() {//destructor
 		delete[]this->denumire;
 }
 int main() {
 	Masina m;
-	m.afisare();
+	cout << m;
 }
