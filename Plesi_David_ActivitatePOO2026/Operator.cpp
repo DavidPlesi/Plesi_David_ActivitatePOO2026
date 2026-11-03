@@ -79,5 +79,5 @@ int main() {
 	Avion a1;
 	Avion a2;
 	a2 = a1;
-	cout << a2.getNrPasageri();
+	cout << "Nr Pasageri: " << a2.getNrPasageri();
 }
