@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ManCity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Seminar6.cpp">
+    <ClCompile Include="Adidasi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
