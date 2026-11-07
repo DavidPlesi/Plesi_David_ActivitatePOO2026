@@ -44,8 +44,6 @@ public:
 
 	~Adidasi();//declarare destructor
 
-	//o functie friend in interiorul clasei , nu mai primeste pointerul this
-
 	//operatori
 
 	//operator functie
@@ -54,8 +52,18 @@ public:
 		return this->pret + (TVA * this->pret);
 	}
 
-
+	//o functie friend in interiorul clasei , nu mai primeste pointerul this
+	friend istream& operator>>(istream& i, Adidasi& a) {
+		float pret;
+		i >> a.pret;
+		return i;
+	}
+	friend ostream& operator<<(ostream& o,const Adidasi& a) {
+		o << a.pret;
+		return o;
+	}
 };
+
 Adidasi::~Adidasi() {//implementare destructor
 	delete[]this->detalii;
 }
@@ -63,4 +71,5 @@ Adidasi::~Adidasi() {//implementare destructor
 void main() {
 	Adidasi a;
 	cout << "Pret + TVA: " << a(0.21f);
+
 }
