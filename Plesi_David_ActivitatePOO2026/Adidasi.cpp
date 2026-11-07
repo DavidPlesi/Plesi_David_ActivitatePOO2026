@@ -44,6 +44,10 @@ public:
 
 	~Adidasi();//declarare destructor
 
+	//getteri
+	float getMarime() {
+		return marime;
+	}
 	//operatori
 
 	//operator functie
@@ -54,8 +58,12 @@ public:
 
 	//o functie friend in interiorul clasei , nu mai primeste pointerul this
 	friend istream& operator>>(istream& i, Adidasi& a) {
+
 		float pret;
+		cout << "Pretul: ";
 		i >> a.pret;
+		cout << "Marime: ";
+		i >> a.marime;
 		return i;
 	}
 	friend ostream& operator<<(ostream& o,const Adidasi& a) {
@@ -70,6 +78,8 @@ Adidasi::~Adidasi() {//implementare destructor
 
 void main() {
 	Adidasi a;
+	cin >> a;
 	cout << "Pret + TVA: " << a(0.21f);
-
+	cout << endl;
+	cout << "Marime: " << a.getMarime();
 }
