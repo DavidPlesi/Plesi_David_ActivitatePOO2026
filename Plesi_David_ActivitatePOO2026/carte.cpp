@@ -58,8 +58,27 @@ public:
 		this->nrPagini = c.nrPagini;
 		this->deCopii = c.deCopii;
 	}
-	~Carte();//declarare destructor'
+	~Carte();//declarare destructor
+
 	//operatori
+
+	Carte& operator=(const Carte& c1) {
+		if (this != &c1) {
+			this->nrAutori = c1.nrAutori;
+			delete[]this->numeAutori;//eliberez memoria veche
+			this->numeAutori = new string[this->nrAutori];
+			for (int i = 0;i < this->nrAutori;i++) {
+				this->numeAutori[i] = c1.numeAutori[i];
+			}
+			this->numeAutori[0] = c1.numeAutori[0];
+			this->numeAutori[1] = c1.numeAutori[1];
+			this->nrCapitole = c1.nrCapitole;
+			this->nrPagini = c1.nrPagini;
+			this->deCopii = c1.deCopii;
+		}
+		return *this;
+	}
+
 	friend istream& operator>>(istream& i, Carte& c) {
 		cout << "Nr Pagini: ";
 		i >> c.nrPagini;
@@ -72,6 +91,9 @@ public:
 		o << "Nr Cuvinte Total = " << c.pagina.nrCuvinte * c.nrPagini;
 		return o;
 	}
+	string& operator[](int pozitie) {
+		return this->numeAutori[pozitie];
+	}
 };
 
 Carte::~Carte() {//implementare destructor
@@ -81,6 +103,9 @@ Carte::~Carte() {//implementare destructor
 void main() {
 	Carte c;
 	Pagina p;
+	Carte c1;
+	Carte c2;
+	c2 = c1;
 	cin >> c;
 	cout << c;
 }
