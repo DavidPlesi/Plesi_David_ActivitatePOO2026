@@ -88,13 +88,18 @@ public:
 		this->nrViteze++;//incrementeaza 
 		return copie; // returneaza copia val initiale , neincrementata
 	}
-	friend ostream& operator<<(ostream& o, Bicicleta b);
+	
+	friend istream& operator>>(istream& i, Bicicleta& b) {
+		i >> b.nrViteze;
+		return i;
+	}
+	friend ostream& operator<<(ostream& o, Bicicleta b) {
+		o << b.nrViteze;
+		return o;
+	}
 };
-ostream& operator<<(ostream& o, Bicicleta b) {
-	o << b.nrViteze;
-	return o;
-}
-Bicicleta::~Bicicleta() {
+
+Bicicleta::~Bicicleta() {//destructor implementat
 	delete[]this->producator;
 }
 
@@ -102,8 +107,9 @@ void main() {
 	Bicicleta b;
 	Frane f;
 	char* rezultat = b + f;
-	cout << rezultat << endl;
+	cout << "Producatorii Bicicletei si a Franelor: " << rezultat << endl;
 	delete[]rezultat;
+	cout << "Nr Viteze: ";
+	cin >> b;
 	cout << "Nr Viteze incrementat: " << ++b;
-	
 }
