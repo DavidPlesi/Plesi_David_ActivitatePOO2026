@@ -75,7 +75,6 @@ public:
 Adidasi::~Adidasi() {//implementare destructor
 	delete[]this->detalii;
 }
-
 void main() {
 	Adidasi a;
 	cin >> a;
