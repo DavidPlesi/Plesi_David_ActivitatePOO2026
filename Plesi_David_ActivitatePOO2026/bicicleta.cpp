@@ -33,7 +33,7 @@ public:
 		this->franePeDisc = f.franePeDisc;
 	}
 	~Frane();//declarare destructor
-	friend int operator+(Bicicleta& b, Frane& f);
+	friend char* operator+(const Bicicleta& b, const Frane& f);
 };
 Frane::~Frane() {//destructor
 	delete[]this->marcaFrane;
@@ -72,10 +72,14 @@ public:
 	}
 	~Bicicleta();//declarare destructor
 	//operatori
-	friend int operator+(Bicicleta& b, Frane& f) {
-		return b.nrFoi + f.diametruDisc;
+	friend char* operator+(const Bicicleta& b,const Frane& f) {//operator+
+		char* rezultat = new char[strlen(b.producator) + strlen(f.marcaFrane) + 1 + 1];
+		strcpy(rezultat, b.producator);
+		strcat(rezultat, " ");
+		strcat(rezultat, f.marcaFrane);
+		return rezultat;
 	}
-	Bicicleta operator++() {//forma prefixata ++a
+	Bicicleta& operator++() {//forma prefixata ++a
 		this->nrViteze++;
 		return *this;
 	}
@@ -84,11 +88,22 @@ public:
 		this->nrViteze++;//incrementeaza 
 		return copie; // returneaza copia val initiale , neincrementata
 	}
+	friend ostream& operator<<(ostream& o, Bicicleta b);
 };
+ostream& operator<<(ostream& o, Bicicleta b) {
+	o << b.nrViteze;
+	return o;
+}
 Bicicleta::~Bicicleta() {
 	delete[]this->producator;
 }
 
 void main() {
-
+	Bicicleta b;
+	Frane f;
+	char* rezultat = b + f;
+	cout << rezultat << endl;
+	delete[]rezultat;
+	cout << "Nr Viteze incrementat: " << ++b;
+	
 }
