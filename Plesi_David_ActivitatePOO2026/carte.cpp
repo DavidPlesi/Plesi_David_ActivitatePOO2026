@@ -92,7 +92,8 @@ public:
 		return o;
 	}
 	string& operator[](int pozitie) {
-		return this->numeAutori[pozitie];
+		if (pozitie >= 0 && pozitie < nrAutori)
+			return this->numeAutori[pozitie];
 	}
 };
 
